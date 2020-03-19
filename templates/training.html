@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base_training.html" %}
 
-</body>
-</html>
+{% block content %}
+    {% if prof == 'строитель' %}
+        <h2>Научные симуляторы</h2>
+        <p><img src="Симуляторы.jpg" alt="Научные симуляторы"><p>
+    {% elif prof == 'инженер' %}
+        <h2> Инженерные тренажеры </h2>
+        <p> <img src="Тренажеры.jpg" alt="Инженерные тренажеры"> </p>
+    {% else %}
+        <h2> Другие тренажеры и симуляторы </h2>
+        <p> <img src="Другие.jpg" alt="Другие тренажеры и симуляторы"> </p>
+    {% endif %}
+
+{% endblock %}
